@@ -13,7 +13,10 @@ interface SpacingProviderProps {
   spacing: (value: SpacingValue) => SpacingValue;
 }
 
-export function SpacingProvider({ children, spacing }: SpacingProviderProps) {
+export function SpacingProvider({
+  children,
+  spacing = identity,
+}: SpacingProviderProps) {
   return (
     <SpacingContext.Provider value={spacing}>
       {children}
