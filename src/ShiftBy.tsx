@@ -7,5 +7,7 @@ export interface ShiftByProps {
 }
 
 export function ShiftBy({ children, x = 0, y = 0 }: ShiftByProps) {
-  return <div style={{ transform: `translate(${x}, ${y})` }}>{children}</div>;
+  return (
+    <div style={{ transform: `translate(${x}px, ${y}px)` }}>{children}</div>
+  );
 }
