@@ -1,0 +1,28 @@
+{
+  "name": "@kyleshevlin/layout",
+  "version": "1.0.0",
+  "description": "Basic React layout components",
+  "type": "module",
+  "source": "src/index.ts",
+  "exports": {
+    "require": "./dist/layout.cjs",
+    "default": "./dist/layout.modern.js"
+  },
+  "main": "./dist/layout.cjs",
+  "module": "./dist/layout.module.js",
+  "unpkg": "./dist/layout.umd.js",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kyle Shevlin <kyle.a.shevlin@gmail.com> (https://kyleshevlin.com/)",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^18.0.24",
+    "microbundle": "^0.15.1"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}
