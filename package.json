@@ -8,8 +8,8 @@
   "module": "./dist/layout.module.js",
   "unpkg": "./dist/layout.umd.js",
   "files": [
-    "./dist/**.js*",
-    "./dist/**/*.ts"
+    "dist",
+    "src"
   ],
   "exports": {
     "require": "./dist/layout.cjs",
