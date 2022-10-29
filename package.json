@@ -25,6 +25,9 @@
     "type": "git",
     "url": "git+https://github.com/kyleshevlin/layout.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
   "devDependencies": {
     "@types/react": "^16.8.0",
