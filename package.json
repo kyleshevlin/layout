@@ -18,6 +18,8 @@
   "scripts": {
     "build": "microbundle --define PKG_VERSION=$npm_package_version",
     "dev": "microbundle watch --define PKG_VERSION=$npm_package_version",
+    "prerelease": "rm -rf dist && npm run build",
+    "release": "npx np",
     "test": "echo \"what tests?\""
   },
   "author": "Kyle Shevlin <kyle.a.shevlin@gmail.com> (https://kyleshevlin.com/)",
