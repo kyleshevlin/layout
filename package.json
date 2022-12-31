@@ -20,7 +20,8 @@
     "dev": "microbundle watch --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react",
     "prerelease": "rm -rf dist && npm run build",
     "release": "npx np",
-    "test": "echo \"what tests?\""
+    "test": "echo \"what tests?\"",
+    "format": "prettier --write src/**/*.tsx"
   },
   "author": "Kyle Shevlin <kyle.a.shevlin@gmail.com> (https://kyleshevlin.com/)",
   "repository": {
@@ -33,7 +34,8 @@
   "license": "MIT",
   "devDependencies": {
     "@types/react": "^16.8.0 || ^17.0.0 || ^18.0.0",
-    "microbundle": "^0.15.1"
+    "microbundle": "^0.15.1",
+    "prettier": "^2.8.1"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0"

@@ -1,16 +1,16 @@
-import * as React from "react";
+import * as React from 'react'
 
 function identity<T>(x: T) {
-  return x;
+  return x
 }
 
-type SpacingValue = string | number | undefined;
+type SpacingValue = string | number | undefined
 
-const SpacingContext = React.createContext(identity<SpacingValue>);
+const SpacingContext = React.createContext(identity<SpacingValue>)
 
 interface SpacingProviderProps {
-  children: React.ReactNode;
-  spacing: (value: SpacingValue) => SpacingValue;
+  children: React.ReactNode
+  spacing: (value: SpacingValue) => SpacingValue
 }
 
 export function SpacingProvider({
@@ -21,7 +21,7 @@ export function SpacingProvider({
     <SpacingContext.Provider value={spacing}>
       {children}
     </SpacingContext.Provider>
-  );
+  )
 }
 
-export const useSpacing = () => React.useContext(SpacingContext);
+export const useSpacing = () => React.useContext(SpacingContext)

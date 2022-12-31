@@ -1,18 +1,18 @@
-import * as React from "react";
-import { useSpacing } from "./SpacingContext";
+import * as React from 'react'
+import { useSpacing } from './SpacingContext'
 
-type MarginValue = string | number;
+type MarginValue = string | number
 
 export interface MarginProps {
-  all?: MarginValue;
-  bottom?: MarginValue;
-  children: React.ReactNode;
-  horizontal?: MarginValue;
-  inline?: boolean;
-  left?: MarginValue;
-  right?: MarginValue;
-  top?: MarginValue;
-  vertical?: MarginValue;
+  all?: MarginValue
+  bottom?: MarginValue
+  children: React.ReactNode
+  horizontal?: MarginValue
+  inline?: boolean
+  left?: MarginValue
+  right?: MarginValue
+  top?: MarginValue
+  vertical?: MarginValue
 }
 
 export function Margin({
@@ -26,14 +26,14 @@ export function Margin({
   top,
   vertical,
 }: MarginProps) {
-  const spacing = useSpacing();
+  const spacing = useSpacing()
 
-  const el = inline ? "span" : "div";
+  const el = inline ? 'span' : 'div'
 
   const styles = React.useMemo(
     () => ({
       // Without setting the `span` to inline-block, margins won't do anything
-      ...(inline && { display: "inline-block" }),
+      ...(inline && { display: 'inline-block' }),
       ...(all && { margin: spacing(all) }),
       ...(horizontal && {
         marginLeft: spacing(horizontal),
@@ -49,7 +49,7 @@ export function Margin({
       ...(bottom && { marginBottom: spacing(bottom) }),
     }),
     [all, bottom, horizontal, left, right, top, vertical]
-  );
+  )
 
-  return React.createElement(el, { style: styles }, children);
+  return React.createElement(el, { style: styles }, children)
 }

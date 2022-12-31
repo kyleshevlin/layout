@@ -1,33 +1,33 @@
-import * as React from "react";
-import { useSpacing } from "./SpacingContext";
+import * as React from 'react'
+import { useSpacing } from './SpacingContext'
 
 export interface FlexProps {
-  align?: React.CSSProperties["alignItems"];
-  children: React.ReactNode;
-  direction?: React.CSSProperties["flexDirection"];
-  gap?: React.CSSProperties["gap"];
-  justify?: React.CSSProperties["justifyContent"];
-  style?: React.CSSProperties;
-  wrap?: React.CSSProperties["flexWrap"];
+  align?: React.CSSProperties['alignItems']
+  children: React.ReactNode
+  direction?: React.CSSProperties['flexDirection']
+  gap?: React.CSSProperties['gap']
+  justify?: React.CSSProperties['justifyContent']
+  style?: React.CSSProperties
+  wrap?: React.CSSProperties['flexWrap']
 }
 
 export function Flex({
   align: alignItems,
   children,
-  direction = "row",
+  direction = 'row',
   gap,
   justify: justifyContent,
   style = {},
   wrap: flexWrap,
 }: FlexProps) {
-  const spacing = useSpacing();
+  const spacing = useSpacing()
 
   return (
     <div
       style={{
         ...style,
         alignItems,
-        display: "flex",
+        display: 'flex',
         flexDirection: direction,
         flexWrap,
         gap: spacing(gap),
@@ -36,16 +36,16 @@ export function Flex({
     >
       {children}
     </div>
-  );
+  )
 }
 
 export interface FlexItemProps {
-  align?: React.CSSProperties["alignSelf"];
-  basis?: React.CSSProperties["flexBasis"];
-  children: React.ReactNode;
-  grow?: React.CSSProperties["flexGrow"];
-  shrink?: React.CSSProperties["flexShrink"];
-  style?: React.CSSProperties;
+  align?: React.CSSProperties['alignSelf']
+  basis?: React.CSSProperties['flexBasis']
+  children: React.ReactNode
+  grow?: React.CSSProperties['flexGrow']
+  shrink?: React.CSSProperties['flexShrink']
+  style?: React.CSSProperties
 }
 
 export function FlexItem({
@@ -68,5 +68,5 @@ export function FlexItem({
     >
       {children}
     </div>
-  );
+  )
 }
