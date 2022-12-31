@@ -19,7 +19,7 @@ function App() {
     <SpacingProvider spacing={spacing}>
       {/* gap={2} will create 16px of spacing between items */}
       <Flex direction="column" gap={2}>
-        <h3>Hello!
+        <h3>Hello!</h3>
         <p>World</p>
       </Flex>
     </SpacingProvider>
