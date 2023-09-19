@@ -1,6 +1,6 @@
 {
   "name": "@kyleshevlin/layout",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "Basic React layout components",
   "type": "module",
   "source": "src/index.ts",
