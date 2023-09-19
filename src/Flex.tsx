@@ -39,6 +39,14 @@ export function Flex({
   )
 }
 
+export function Stack(props: Omit<FlexProps, 'direction'>) {
+  return <Flex {...props} direction="column" />
+}
+
+export function Row(props: Omit<FlexProps, 'direction'>) {
+  return <Flex {...props} direction="row" />
+}
+
 export interface FlexItemProps {
   align?: React.CSSProperties['alignSelf']
   basis?: React.CSSProperties['flexBasis']

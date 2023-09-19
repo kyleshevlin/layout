@@ -17,7 +17,7 @@ export function Grid({
   templateAreas: gridTemplateAreas,
   templateColumns: gridTemplateColumns,
   templateRows: gridTemplateRows,
-}) {
+}: GridProps) {
   const spacing = useSpacing()
 
   return (

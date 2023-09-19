@@ -4,13 +4,14 @@ function identity<T>(x: T) {
   return x
 }
 
-type SpacingValue = string | number | undefined
+export type SpacingValue = string | number | undefined
+export type SpacingFunction = (value: SpacingValue) => SpacingValue
 
-const SpacingContext = React.createContext(identity<SpacingValue>)
+const SpacingContext = React.createContext<SpacingFunction>(identity)
 
-interface SpacingProviderProps {
+export interface SpacingProviderProps {
   children: React.ReactNode
-  spacing: (value: SpacingValue) => SpacingValue
+  spacing: SpacingFunction
 }
 
 export function SpacingProvider({
